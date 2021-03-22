@@ -4,22 +4,24 @@ var cloud;
 
 function setup() {
 	createCanvas(1000,800);
-	background(217,151,70);
-	for(var i = 0; i < 4; i++){
-		cloud[i] = new Clouds(50,50); 
-	}
+	background(0);
+	// for(var i = 0; i < 4; i++){
+	// 	cloud[i] = new Clouds(50,50); 
+	// }
+	cloud = new Clouds(50,50);
 	cloud.display();
 	
 }
 
 function draw(){
 	fill(200);
-    for(var i = 0; i< clouds.length; i++){
+    // for(var i = 0; i< clouds.length; i++){
     	cloud.update();
 		cloud.display();
 		cloud.move();
-    }
+    
 } 
+
 
 // class Clouds(){
 // 	constructor(x,y)

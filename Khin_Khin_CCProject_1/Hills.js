@@ -1,8 +1,6 @@
 
 //mountains in the back 
-function Hills_back(color){
-	
-
-
+class Hills_back(color){
 
 }
+	

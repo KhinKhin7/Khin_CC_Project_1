@@ -1,37 +1,33 @@
 
 class Clouds(){
 	constructor(x,y)
-	this.x = random(0,width);
-	this.y = random(0,height);
-	this.velocity = random(0,100);
+	this.x = random(0,width); //random clouds across sketch window
+	this.y = random(0,height/4); //random clouds on the top quarter of sketch window 
+	this.velocity = random(0,100); //how fast clouds appear
 	//this.cloudSize = 2;
-
-     
 }
 
   update(){
-  	this.x = this.x + this.velocity
+  	this.x = this.x + this.velocity //
   	this.y = this.y + this.velocity
   	//this.cloudSize = this.cloudSize+1;
-
   }
 
   display(){
-  	stroke(255);
-    strokeWeight(1);
-    fill(255);
-    ellipse(this.x, this.y, 24, 24);
-    ellipse(this.x,this.y,24,24);
-    ellipse(this.x,this.y,24,24);
-    ellipse(this.x,this.y,24,24);
-    ellipse(this.x,this.y,24,24);
-    ellipse(this.x,this.y,24,24);
+    fill(100,100);
+    ellipse(this.x,this.y,10,20);
+    ellipse(this.x+5,this.y,10,20);
+    fill(255,100);
+    ellipse(this.x+10,this.y+5,10,20);
+    ellipse(this.x+15,this.y+10,10,20);
+    ellipse(this.x+20,this.y+15,10,20);
+    ellipse(this.x+25,this.y+20,10,20);
   }
 
   move(){
   	this.x = this.x + 5;
     this.y = this.y - 3;
-    
+
     if(this.x >= width){
     this.x = 0;
   }

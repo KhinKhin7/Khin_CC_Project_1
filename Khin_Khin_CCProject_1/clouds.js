@@ -1,41 +1,108 @@
 
-class Clouds(){
-	constructor(x,y)
-	this.x = random(0,width); //random clouds across sketch window
-	this.y = random(0,height/4); //random clouds on the top quarter of sketch window 
-	this.velocity = random(0,100); //how fast clouds appear
-	//this.cloudSize = 2;
-}
+class Clouds{
 
+	constructor(){
+	this.x = (10,width); 
+	this.y = random(20,(height/6)); 
+	this.velocity = random(0,0.001); 
+}//constructor
   update(){
-  	this.x = this.x + this.velocity //
-  	this.y = this.y + this.velocity
-  	//this.cloudSize = this.cloudSize+1;
-  }
-
+  	this.x = this.x + this.velocity; 
+  	this.y = this.y + this.velocity;
+  }//update
+  
   display(){
-    fill(100,100);
-    ellipse(this.x,this.y,10,20);
-    ellipse(this.x+5,this.y,10,20);
-    fill(255,100);
-    ellipse(this.x+10,this.y+5,10,20);
-    ellipse(this.x+15,this.y+10,10,20);
-    ellipse(this.x+20,this.y+15,10,20);
-    ellipse(this.x+25,this.y+20,10,20);
-  }
+     if(keyIsPressed==true){
+      stroke(62,87,117);
+      fill(62,87,117);
+      //small lump of cloud 
+      ellipse(this.x-200,this.y+100,60,30);
+      ellipse(this.x+200, this.y+110, 40,25);
+      ellipse(this.x-230,this.y+115,40,25);
+      ellipse(this.x-170,this.y+120,50,20);
+      //between small cloud 
+      ellipse(this.x+100,this.y+150,30,10);
+      ellipse(this.x+100,this.y+120,40,10);
+      ellipse(this.x+90,this.y+125,40,10);
+      ellipse(this.x+80,this.y+120,40,20);
+      //flatter cloud
+      ellipse(this.x+300,this.y+30,70,30);
+      ellipse(this.x+300,this.y+20,40,20);
+      ellipse(this.x+330,this.y+25,50,20);
+      ellipse(this.x+270,this.y+35,50,20);
+      //another flat cloud 
+      ellipse(this.x+600,this.y+90,90,30);
+      ellipse(this.x+600,this.y+70,60,20);
+      ellipse(this.x+630,this.y+75,60,20);  
+      ellipse(this.x+570,this.y+85,60,30);
+      //small cloud on right
+      ellipse(this.x+6500,this.y+70,30,10);
+      ellipse(this.x+670,this.y+50,40,10);
+      ellipse(this.x+700,this.y+55,40,10);
+      ellipse(this.x+700,this.y+55,40,20);
+      //left most clouds
+      
+      ellipse(this.x-200,this.y+100,70,30);
+      ellipse(this.x-200,this.y+110,40,20);
+      ellipse(this.x-230,this.y+115,50,20);
+      ellipse(this.x-170,this.y+120,50,20);
+      
+      ellipse(this.x-300,this.y+90,90,30);
+      ellipse(this.x-300,this.y+80,50,10);
+      ellipse(this.x-330,this.y+85,50,10);
+      ellipse(this.x-270,this.y+95,50,10);
+     }//if
+     else{
+      stroke(220);
+      fill(220);
+      //small lump of cloud 
+      ellipse(this.x,this.y,60,30);
+      ellipse(this.x+10, this.y+10, 40,25);
+      ellipse(this.x-10,this.y-15,40,25);
+      ellipse(this.x-15,this.y+10,50,20);
+      //between small cloud 
+      ellipse(this.x+100,this.y+100,30,10);
+      ellipse(this.x+100,this.y+80,40,10);
+      ellipse(this.x+90,this.y+85,40,10);
+      ellipse(this.x+80,this.y+95,40,20);
+      //flatter cloud
+      ellipse(this.x+300,this.y+30,70,30);
+      ellipse(this.x+300,this.y+20,40,20);
+      ellipse(this.x+330,this.y+25,50,20);
+      ellipse(this.x+270,this.y+35,50,20);
+      //another flat cloud 
+      ellipse(this.x+600,this.y+100,90,30);
+      ellipse(this.x+600,this.y+80,60,20);
+      ellipse(this.x+630,this.y+85,60,20);
+      ellipse(this.x+570,this.y+95,60,30);
+      //small cloud on right
+      ellipse(this.x+6500,this.y+50,30,10);
+      ellipse(this.x+670,this.y+30,40,10);
+      ellipse(this.x+700,this.y+35,40,10);
+      ellipse(this.x+700,this.y+45,40,20);
+      //left most clouds
+      ellipse(this.x-200,this.y+130,70,30);
+      ellipse(this.x-200,this.y+120,40,20);
+      ellipse(this.x-230,this.y+125,50,20);
+      ellipse(this.x-170,this.y+135,50,20);
+      
+      ellipse(this.x-300,this.y+100,90,30);
+      ellipse(this.x-300,this.y+90,60,20);
+      ellipse(this.x-330,this.y+95,60,20);
+      ellipse(this.x-270,this.y+105,60,20);
+    }//else
+  }//display
 
   move(){
-  	this.x = this.x + 5;
-    this.y = this.y - 3;
+  	this.x = this.x +.5;
+    this.y = this.y +0.01;
 
     if(this.x >= width){
     this.x = 0;
-  }
-
-  function createClouds(){
-  	var Clouds_x = random(0,1000);
-  	var Clouds_y = random(0,200);
-  	var clouds_sky = new Clouds(Clouds_x, Clouds_y);
-  	clouds.push(clouds_sky);
-  }
+  }//if
+    else if(this.y >= height/6){
+      this.y = 0;
+    }//else if 
+  }//move
+}
 

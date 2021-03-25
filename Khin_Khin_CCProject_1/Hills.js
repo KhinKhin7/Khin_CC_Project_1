@@ -1,13 +1,8 @@
 
-// let r = 0.1;
-// let g = 0.1;
-// let b = 0.1; 
-
 class Hills{
 
 	display(){
-		//
-		//stroke(166,107,56);
+		//night time 
 		if(keyIsPressed == true){
 			strokeWeight(2);
 			//dark hills
@@ -39,8 +34,8 @@ class Hills{
 			ellipse(50, 750, 1000, 400);
 			fill(64,38,10);
 			ellipse(700,900, 1000,500);
-
-		}
+		}//if 
+		//day time
 		else{
 		strokeWeight(2);
 		//dark hills
@@ -72,10 +67,7 @@ class Hills{
 		ellipse(50, 750, 1000, 400);
 		fill(220,156,75);
 		ellipse(700,900, 1000,500);
-	}
-
-	}
-
-
-}
+	}//else
+	}//display
+}//class
 	

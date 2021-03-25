@@ -9,7 +9,6 @@ function setup() {
 	cloud = new Clouds();
 	hill = new Hills();
 	oasis = new Oasis();
-	
 }
 
 function draw(){
@@ -19,6 +18,9 @@ function draw(){
     	cloud.update();
 		cloud.move(); 
 		cloud.display();
+		fill(64,38,10);
+		rect(0,400, 1000,300);
+		oasis.display();
 		hill.display();
 		//moon
 		noStroke();
@@ -27,9 +29,6 @@ function draw(){
 		strokeWeight(2);
 		fill(250,5);
 		ellipse(500,150,200,200);
-
-
-
 	}
 	//day time
 	else{
@@ -43,6 +42,8 @@ function draw(){
 		noStroke();
 		fill(242,203,118,50);
 		ellipse(500,350,220,220);
+		fill(192,127,55);
+		rect(0,400, 1000,300);
 		oasis.display();
 		hill.display();
 	}

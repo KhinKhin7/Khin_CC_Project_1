@@ -3,7 +3,7 @@ class Clouds{
 
 	constructor(){
 	this.x = (10,width); 
-	this.y = random(20,(height/6)); 
+	this.y = random(20,(height/10)); 
 	this.velocity = random(0,0.001); 
 }//constructor
   update(){
@@ -94,15 +94,15 @@ class Clouds{
   }//display
 
   move(){
-  	this.x = this.x +.5;
+  	this.x = this.x +.2;
     this.y = this.y +0.01;
 
     if(this.x >= width){
     this.x = 0;
   }//if
-    else if(this.y >= height/6){
+    else if(this.y >= height/10){
       this.y = 0;
     }//else if 
   }//move
-}
+}//class
 

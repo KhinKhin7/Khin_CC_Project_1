@@ -5,50 +5,49 @@
 
 class Hills{
 
-	constructor(){
-	// 	this.colorR = (194,198);
-	// 	this.colorG = (123,125);
-	// 	this.colorB = (61,63);
-	// 	this.velocity = random(0,1);
-		// this.colorR = r;
-		// this.colorG = g;
-		// this.colorB = b; 
-		// this.velocity = random(0,0.11);
-
-
-
-	}//constructor
-
-	// update(){
-	// // 	this.colorR = this.colorR + this.velocity;
-	// // 	this.colorG = this.colorG + this.velocity;
-	// // 	this.colorB = this.colorB + this.velocity;
-	// // 	if(this.colorR > 197, this.colorG > 124, this.colorB> 62){
-	// // 		this.velocity *= -0.01;
-	// // 	}
-	// 	this.colorR = this.colorR + this.velocity;
-	// 	if(this.colorR > 3 || this.colorR <0){
-	// 		this.colorR *= -1;
-	// 	}
-	// 	this.colorG = this.colorG +this.velocity;
-	// 	if(this.colorG > 3 || this.color < 0){
-	// 		this.colorG *= -1;
-	// 	}
-	// 	this.colorB = this.colorB +this.velocity;
-	// 	if(this.colorB >3 || this.color <0){
-	// 		this.colorB *= -1;
-	// 	}
-	// }
-
 	display(){
 		//
 		//stroke(166,107,56);
+		if(keyIsPressed == true){
+			strokeWeight(2);
+			//dark hills
+			stroke(46,32,17);
+			fill(46,32,17);
+			//hills all the way in the back
+			ellipse(950,350,500,100);
+			ellipse(100,340,400,70);
+			ellipse(700,350,300,80);
+			ellipse(450,350,400,100);
+			//hills in front of the ones in the back
+			ellipse(300,360,400,70);
+			ellipse(450,360,300,70);
+			ellipse(700,370,500,60);
+			ellipse(900,380,400,30);
+			//lighter colored hills
+			stroke(46,32,17);
+			fill(51,31,8,250);
+		    ellipse(260,390,300,60);
+		    ellipse(400,390,300,50);
+		    ellipse(980,390,300,50);
+		    ellipse(500,400,1200,40);
+			ellipse(50,380,250,60);
+			ellipse(25,390,100,30);
+			ellipse(75,400,170,40);
+			//lightest hills, closest 
+			fill(51,31,8);
+			ellipse(850,680,800,200);
+			ellipse(50, 750, 1000, 400);
+			fill(64,38,10);
+			ellipse(700,900, 1000,500);
 
+		}
+		else{
 		strokeWeight(2);
 		//dark hills
 		stroke(180,110,57);
-		fill(186,116,50); 
+		fill(186,116,50,250); 
 		//hills all the way in the back
+		ellipse(950,350,500,100);
 		ellipse(100,340,400,70);
 		ellipse(700,350,300,80);
 		ellipse(450,350,400,100);
@@ -56,20 +55,25 @@ class Hills{
 		ellipse(300,360,400,70);
 		ellipse(450,360,300,70);
 		ellipse(700,370,500,60);
+		ellipse(900,380,400,30);
 		//lighter colored hills
 		stroke(192,120,63);
-		fill(198 ,127 ,61);
+		fill(198 ,127 ,61,250);
 	    ellipse(260,390,300,60);
 	    ellipse(400,390,300,50);
+	    ellipse(980,390,300,50);
+	    ellipse(500,400,1200,40);
 		ellipse(50,380,250,60);
 		ellipse(25,390,100,30);
 		ellipse(75,400,170,40);
-
-		
-		//lights hills
+		//lightest hills, closest 
 		fill(217,151,72);
+		ellipse(850,680,800,200);
 		ellipse(50, 750, 1000, 400);
-		ellipse()
+		fill(220,156,75);
+		ellipse(700,900, 1000,500);
+	}
+
 	}
 
 

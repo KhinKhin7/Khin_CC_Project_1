@@ -3,8 +3,7 @@ let cloud;
 let hill;
 let oasis;
 let val = 0;
-
-
+let degrees;
 
 function setup() {
 	createCanvas(1000,800);
@@ -25,8 +24,35 @@ function draw(){
 	keyTyped('6');
 	keyTyped('7');
 	keyTyped('8');
-
+	//recursive trees
+	if(key === '4'){
+	  stroke(118,158,31);
+	  strokeWeight(3);
+	  let d = (mouseX / width) * 180;
+	  degrees = radians(d);
+	  line(20,420,20,250);
+	  translate(20,250);
+	  branch(150);
+	  stroke(86,115,23);
+	  strokeWeight(4);
+	  line(20,180,20,50);
+	  translate(20,50);
+	  branch(150);
+	  strokeWeight(3);
+	  line(-25,100,-30,130);
+	  translate(-25,130);
+	  branch(10);
+	  strokeWeight(5);
+	  line(700,0,700,-130);
+	  translate(700,-130);
+	  branch(100);
+	  stroke(118,158,31);
+	  line(240,150,240,-130);
+	  translate(240,-130);
+	  branch(100);
+	}
 } 
+
 //climbing up the hills and revealing the oasis
 function keyTyped(){
 	//background(230,147,46);
@@ -54,7 +80,6 @@ function keyTyped(){
 		fill(220,142,50);
 		ellipse(700,900, 1000,500);
 	} //if 
-
 	else if(key === '2'){
 		background(136,165,191);
 		// ellipse(500,350,200,200);
@@ -98,23 +123,18 @@ function keyTyped(){
 	} //else if 
 	else if(key === '4'){
 	    background(136,165,191);
-		ellipse(500,350,200,200);
+		ellipse(500,350,200,200); //sun
 		cloud.update();
 		cloud.move();
 		cloud.display();
 		hill.display();
-		// line(150,500,0,-120);
-		// branch(120);
-
-		//sun
 		noStroke();
 		fill(242,203,118,50);
-		ellipse(500,350,220,220);
+		ellipse(500,350,220,220); //sun outline
 		fill(192,127,55);
 		rect(0,400, 1000,300);
 		oasis.display();
 		hill.display();
-	
 	}//else if
 	else if(key === '5'){
 		background(136,165,191);
@@ -203,8 +223,26 @@ function keyTyped(){
 		ellipse(random(800,1000),random(450,520),15,15);
 		pop();
 	}
-	
-
+}
+//referenced the code from p5 from an example of recursive trees
+function branch(y) {
+  y *= 0.6;
+  if (y > 1) {
+    push();    
+    rotate(degrees);   
+    line(0, 0, 0, -y);  
+    line(10, 0, 0, -y);
+    translate(10, -y); 
+    branch(y);      
+    pop();     
+    push();
+    rotate(-degrees);
+    line(0, 0, 0, -y);
+    line(0, 0, 0, -y);
+    translate(10, -y);
+    branch(y);
+    pop();
+  }
 }
 
 

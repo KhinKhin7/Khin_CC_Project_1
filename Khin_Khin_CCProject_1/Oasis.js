@@ -7,13 +7,12 @@ class Oasis{
 			strokeWeight(1,10);
 			fill(186,244,247,190);
 			ellipse(400,520,1550,185);
-			fill(157,244,241,95)
+			fill(157,244,241,95);
 			ellipse(350,520,1450,200);
 			fill(177,226,252,99);
 			ellipse(450,550,1000,250);
 			fill(165,196,254,70);
 			ellipse(570,510,1500,1850);
-
 			//flickers on water
 			//stroke(0);
 			fill(224,242,255,140);

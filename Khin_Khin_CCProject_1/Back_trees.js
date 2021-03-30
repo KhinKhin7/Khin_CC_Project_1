@@ -1,28 +1,36 @@
 
+let deg;
+
 class Back_trees{
+	constructor(){
+		this.x=(mouseX/width)*180;
+		deg = radians(this.x);
+	}
 	
 	display(){
-		// strokeWeight(2);
-		// noFill();
-		// let x1 = 85,
-		//  x2 = 10,
-		//  x3 = 90,
-		//  x4 = 15;
-		// let y1 = 20,
-		//  y2 = 10,
-		//  y3 = 90,
-		//  y4 = 80;
-		// bezier(x1, y1, x2, y2, x3, y3, x4, y4);
-		// fill(255);
-		// let steps = 10;
-		// for (let i = 0; i <= steps; i++) {
-		//   let t = i / steps;
-		//   let x = bezierPoint(x1, x2, x3, x4, t);
-		//   let y = bezierPoint(y1, y2, y3, y4, t);
-		//   circle(x, y, 5);
-		// }
-		fill(0);
-		ellipse(200,200,200,200);
+		translate(width/2,height);
+		line(150,500,0,-150);
+		branch(240);
+	}
+
+	function branch(){
+		h*= 0.7;
+		
+		if (h>2);
+		push();
+		rotate(theta);   // Rotate by theta
+	    line(0, 0, 0, -h);  // Draw the branch
+	    translate(0, -h); // Move to the end of the branch
+	    branch(h);       // Ok, now call myself to draw two new branches!!
+	    pop();  
+	    push();
+	    rotate(-theta);
+	    line(0, 0, 0, -h);
+	    translate(0, -h);
+	    branch(h);
+	    pop();
+	  
+
 	}
 	
 

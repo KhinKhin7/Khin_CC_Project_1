@@ -12,47 +12,6 @@ class Clouds{
   }//update
   
   display(){
-     if(keyIsPressed==true){
-      stroke(62,87,117);
-      fill(62,87,117);
-      //small lump of cloud 
-      ellipse(this.x-200,this.y+100,60,30);
-      ellipse(this.x+200, this.y+110, 40,25);
-      ellipse(this.x-230,this.y+115,40,25);
-      ellipse(this.x-170,this.y+120,50,20);
-      //between small cloud 
-      ellipse(this.x+100,this.y+150,30,10);
-      ellipse(this.x+100,this.y+120,40,10);
-      ellipse(this.x+90,this.y+125,40,10);
-      ellipse(this.x+80,this.y+120,40,20);
-      //flatter cloud
-      ellipse(this.x+300,this.y+30,70,30);
-      ellipse(this.x+300,this.y+20,40,20);
-      ellipse(this.x+330,this.y+25,50,20);
-      ellipse(this.x+270,this.y+35,50,20);
-      //another flat cloud 
-      ellipse(this.x+600,this.y+90,90,30);
-      ellipse(this.x+600,this.y+70,60,20);
-      ellipse(this.x+630,this.y+75,60,20);  
-      ellipse(this.x+570,this.y+85,60,30);
-      //small cloud on right
-      ellipse(this.x+6500,this.y+70,30,10);
-      ellipse(this.x+670,this.y+50,40,10);
-      ellipse(this.x+700,this.y+55,40,10);
-      ellipse(this.x+700,this.y+55,40,20);
-      //left most clouds
-      
-      ellipse(this.x-200,this.y+100,70,30);
-      ellipse(this.x-200,this.y+110,40,20);
-      ellipse(this.x-230,this.y+115,50,20);
-      ellipse(this.x-170,this.y+120,50,20);
-      
-      ellipse(this.x-300,this.y+90,90,30);
-      ellipse(this.x-300,this.y+80,50,10);
-      ellipse(this.x-330,this.y+85,50,10);
-      ellipse(this.x-270,this.y+95,50,10);
-     }//if
-     else{
       stroke(220);
       fill(220);
       //small lump of cloud 
@@ -90,7 +49,6 @@ class Clouds{
       ellipse(this.x-300,this.y+90,60,20);
       ellipse(this.x-330,this.y+95,60,20);
       ellipse(this.x-270,this.y+105,60,20);
-    }//else
   }//display
 
   move(){
